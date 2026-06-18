@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AlgoVoi — the JCS canonicalisation substrate for agentic payments</title>
+  <meta name="description" content="AlgoVoi authors the open JCS (RFC 8785) canonicalisation substrate and verifiable receipt formats for agentic payments — x402, AP2, A2A and MPP. Deterministic, recomputable, offline-verifiable receipts, cross-validated across eight languages, with dated IETF Internet-Drafts." />
+  <meta name="keywords" content="JCS canonicalisation, RFC 8785, RFC 9421, canonicalisation substrate, action_ref, compliance receipt, settlement attestation, verifiable receipts, agentic payments, x402, AP2, A2A, MPP, AlgoVoi" />
+  <link rel="canonical" href="https://chopmob-cloud.github.io/" />
+  <meta property="og:title" content="AlgoVoi — the JCS canonicalisation substrate for agentic payments" />
+  <meta property="og:description" content="Open JCS (RFC 8785) + RFC 9421 substrate and verifiable receipt formats for x402, AP2, A2A and MPP. Cross-validated across eight languages; dated IETF drafts." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://chopmob-cloud.github.io/" />
+  <meta property="og:site_name" content="AlgoVoi" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@algovoi" />
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Organization","name":"AlgoVoi","url":"https://algovoi.co.uk","sameAs":["https://github.com/chopmob-cloud","https://docs.algovoi.co.uk","https://x.com/algovoi"],"description":"AlgoVoi authors the open JCS (RFC 8785) canonicalisation substrate and verifiable receipt formats for agentic payments."}
+  </script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: system-ui, -apple-system, sans-serif; background: #0D1117; color: #E6EDF3; line-height: 1.7; min-height: 100vh; }
+    a { color: #00C8FF; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    code { background: rgba(48,54,61,0.5); padding: 0.1em 0.4em; border-radius: 5px; font-size: 0.9em; word-break: break-word; }
+    header { position: sticky; top: 0; z-index: 50; display: flex; align-items: center; justify-content: space-between; padding: 1rem 1.5rem; border-bottom: 1px solid rgba(48,54,61,0.5); background: rgba(13,17,23,0.85); backdrop-filter: blur(12px); }
+    .logo { display: flex; align-items: center; gap: 0.5rem; }
+    .logo-mark { width: 28px; height: 28px; border-radius: 8px; background: linear-gradient(135deg, #00C8FF, #8B5CF6); display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: 900; color: #0D1117; }
+    .logo-name { font-weight: 700; font-size: 0.875rem; color: #E6EDF3; }
+    header a.cta { background: linear-gradient(135deg, #00C8FF, #8B5CF6); color: #0D1117; font-size: 0.75rem; font-weight: 700; padding: 0.5rem 1rem; border-radius: 8px; }
+    main { max-width: 860px; margin: 0 auto; padding: 4rem 1.5rem 6rem; }
+    .badge { display: inline-block; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #8B5CF6; border: 1px solid rgba(139,92,246,0.35); background: rgba(139,92,246,0.08); padding: 0.25rem 0.75rem; border-radius: 999px; margin-bottom: 1rem; }
+    h1 { font-size: clamp(1.75rem, 4vw, 2.5rem); font-weight: 800; line-height: 1.15; margin-bottom: 1rem; }
+    h1 span { background: linear-gradient(135deg, #00C8FF, #8B5CF6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .subtitle { color: #8B949E; font-size: 1.05rem; max-width: 680px; }
+    h2 { font-size: 1.35rem; font-weight: 700; margin: 2.75rem 0 0.85rem; }
+    p { color: #C9D1D9; margin-bottom: 1rem; }
+    ul { padding-left: 1.25rem; margin-bottom: 1rem; }
+    li { color: #C9D1D9; margin-bottom: 0.5rem; }
+    .footer-links { margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid rgba(48,54,61,0.5); font-size: 0.875rem; color: #8B949E; }
+  </style>
+</head>
+<body>
+  <header>
+    <a class="logo" href="https://algovoi.co.uk">
+      <span class="logo-mark">AV</span>
+      <span class="logo-name">AlgoVoi</span>
+    </a>
+    <a class="cta" href="https://docs.algovoi.co.uk">Docs</a>
+  </header>
+  <main>
+    <span class="badge">Open substrate</span>
+    <h1>The JCS <span>canonicalisation substrate</span> for agentic payments</h1>
+    <p class="subtitle">AlgoVoi authors the open <strong>JCS (RFC 8785)</strong> canonicalisation discipline and the verifiable receipt formats that let an agent payment be re-derived and checked by anyone &mdash; across <strong>x402, AP2, A2A and MPP</strong>, on one shared substrate.</p>
+
+    <h2>What the substrate defines</h2>
+    <ul>
+      <li><strong><code>action_ref</code></strong> &mdash; <code>SHA-256(JCS({agent_id, action_type, scope, timestamp_ms}))</code>: a content-addressed reference to a payment action, recomputable from the disclosed fields alone.</li>
+      <li><strong>Compliance receipt</strong> &mdash; categorical ALLOW / REFER / DENY screening outcome, signed and no-PII.</li>
+      <li><strong>Settlement attestation</strong> &mdash; binds the on-chain settlement to the same <code>action_ref</code>.</li>
+      <li><strong>RFC 9421 signing base</strong> &mdash; the canonical signing input for HTTP message signatures across a proxy chain.</li>
+    </ul>
+
+    <h2>Open, and verifiable yourself</h2>
+    <p>The conformance vectors are published under <strong>Apache-2.0</strong> and cross-validated byte-identical across <strong>eight independent implementations in eight languages</strong>. Import the set by digest and confirm your implementation produces the same bytes.</p>
+    <ul>
+      <li>Conformance vectors &amp; verifier: <a href="https://github.com/chopmob-cloud/algovoi-jcs-conformance-vectors">algovoi-jcs-conformance-vectors</a></li>
+      <li>Receipt verifier: <a href="https://github.com/chopmob-cloud/algovoi-receipt-verifier">algovoi-receipt-verifier</a></li>
+      <li>RFC 9421 signer / verifier: <a href="https://github.com/chopmob-cloud/algovoi-rfc9421-signer">signer</a> &middot; <a href="https://github.com/chopmob-cloud/algovoi-rfc9421-verifier">verifier</a></li>
+    </ul>
+
+    <h2>Standards</h2>
+    <p>The derivations are written up as Independent-Submission, Informational IETF Internet-Drafts:</p>
+    <ul>
+      <li><code>draft-hopley-x402-canonicalisation-jcs-v1</code></li>
+      <li><code>draft-hopley-x402-compliance-receipt</code></li>
+      <li><code>draft-hopley-x402-settlement-attestation</code></li>
+    </ul>
+
+    <div class="footer-links">
+      <a href="https://algovoi.co.uk">algovoi.co.uk</a> &nbsp;&middot;&nbsp;
+      <a href="https://docs.algovoi.co.uk/agentic-payment-receipts">Agentic payment receipts</a> &nbsp;&middot;&nbsp;
+      <a href="https://docs.algovoi.co.uk/canonicalisation-substrate">Substrate docs</a> &nbsp;&middot;&nbsp;
+      <a href="https://github.com/chopmob-cloud">GitHub</a>
+    </div>
+  </main>
+</body>
+</html>
