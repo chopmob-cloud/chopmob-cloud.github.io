@@ -3,20 +3,99 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AlgoVoi — the JCS canonicalisation substrate for agentic payments</title>
-  <meta name="description" content="AlgoVoi authors the open JCS (RFC 8785) canonicalisation substrate and verifiable receipt formats for agentic payments — x402, AP2, A2A and MPP. Deterministic, recomputable, offline-verifiable receipts, cross-validated across eight languages, with dated IETF Internet-Drafts." />
-  <meta name="keywords" content="JCS canonicalisation, RFC 8785, RFC 9421, canonicalisation substrate, action_ref, compliance receipt, settlement attestation, verifiable receipts, agentic payments, x402, AP2, A2A, MPP, AlgoVoi" />
+  <title>AlgoVoi — JCS canonicalisation substrate &amp; verifiable receipts for agentic payments (x402, AP2, A2A, MPP)</title>
+  <meta name="description" content="AlgoVoi authors the open JCS (RFC 8785) canonicalisation substrate and the verifiable, offline-verifiable compliance-receipt formats for agentic payments — x402, AP2, A2A and MPP. Deterministic, recomputable, no-PII receipts bound by action_ref, cross-validated byte-for-byte across eight languages, with dated IETF Internet-Drafts." />
+  <meta name="keywords" content="JCS canonicalisation, JCS canonicalization, JSON Canonicalization Scheme, RFC 8785, RFC 9421, canonicalisation substrate, action_ref, compliance receipt, settlement attestation, retention chain, verifiable receipts, offline-verifiable receipt, no-PII compliance receipt, agentic payments, agentic commerce compliance, AI agent sanctions screening, x402 compliance receipt, AP2 verifiable receipts, A2A settlement attestation, MPP compliance receipt, conformance vectors, AlgoVoi" />
+  <meta name="author" content="AlgoVoi" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+  <meta name="theme-color" content="#0D1117" />
   <link rel="canonical" href="https://chopmob-cloud.github.io/" />
-  <meta property="og:title" content="AlgoVoi — the JCS canonicalisation substrate for agentic payments" />
-  <meta property="og:description" content="Open JCS (RFC 8785) + RFC 9421 substrate and verifiable receipt formats for x402, AP2, A2A and MPP. Cross-validated across eight languages; dated IETF drafts." />
+
+  <meta property="og:title" content="AlgoVoi — JCS canonicalisation substrate &amp; verifiable receipts for agentic payments" />
+  <meta property="og:description" content="Open JCS (RFC 8785) + RFC 9421 substrate and offline-verifiable compliance-receipt formats for x402, AP2, A2A and MPP. action_ref binding; cross-validated across eight languages; dated IETF drafts." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://chopmob-cloud.github.io/" />
   <meta property="og:site_name" content="AlgoVoi" />
+  <meta property="og:image" content="https://algovoi.co.uk/og-card.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="AlgoVoi — JCS canonicalisation substrate for agentic payments" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:site" content="@algovoi" />
+  <meta name="twitter:title" content="AlgoVoi — JCS canonicalisation substrate &amp; verifiable receipts for agentic payments" />
+  <meta name="twitter:description" content="Open JCS (RFC 8785) substrate and offline-verifiable compliance receipts for x402, AP2, A2A and MPP." />
+  <meta name="twitter:image" content="https://algovoi.co.uk/og-card.png" />
+
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"Organization","name":"AlgoVoi","url":"https://algovoi.co.uk","sameAs":["https://github.com/chopmob-cloud","https://docs.algovoi.co.uk","https://x.com/algovoi"],"description":"AlgoVoi authors the open JCS (RFC 8785) canonicalisation substrate and verifiable receipt formats for agentic payments."}
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://algovoi.co.uk/#org",
+        "name": "AlgoVoi",
+        "url": "https://algovoi.co.uk",
+        "logo": "https://algovoi.co.uk/og-card.png",
+        "sameAs": [
+          "https://github.com/chopmob-cloud",
+          "https://docs.algovoi.co.uk",
+          "https://x.com/algovoi"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://chopmob-cloud.github.io/#site",
+        "url": "https://chopmob-cloud.github.io/",
+        "name": "AlgoVoi substrate hub",
+        "publisher": { "@id": "https://algovoi.co.uk/#org" }
+      },
+      {
+        "@type": "TechArticle",
+        "headline": "The JCS canonicalisation substrate and verifiable receipts for agentic payments",
+        "description": "AlgoVoi's open JCS (RFC 8785) canonicalisation discipline, action_ref derivation, and offline-verifiable compliance-receipt formats for x402, AP2, A2A and MPP.",
+        "about": ["JCS canonicalisation", "RFC 8785", "RFC 9421", "action_ref", "compliance receipt", "settlement attestation", "verifiable receipts", "agentic payments", "x402", "AP2", "A2A", "MPP"],
+        "url": "https://chopmob-cloud.github.io/",
+        "datePublished": "2026-06-18",
+        "dateModified": "2026-06-18",
+        "author": { "@id": "https://algovoi.co.uk/#org" },
+        "publisher": { "@id": "https://algovoi.co.uk/#org" }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "AlgoVoi", "item": "https://algovoi.co.uk" },
+          { "@type": "ListItem", "position": 2, "name": "Substrate hub", "item": "https://chopmob-cloud.github.io/" }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is the JCS canonicalisation substrate?",
+            "acceptedAnswer": { "@type": "Answer", "text": "It is AlgoVoi's open discipline that pins JSON Canonicalization Scheme (JCS, RFC 8785) as the canonical preimage form for agentic-payment receipts, so the same logical object serialises to identical bytes across independent implementations and can be re-verified years later." }
+          },
+          {
+            "@type": "Question",
+            "name": "What is action_ref?",
+            "acceptedAnswer": { "@type": "Answer", "text": "action_ref is SHA-256(JCS({agent_id, action_type, scope, timestamp_ms})): a content-addressed reference to a payment action that anyone can recompute from the disclosed fields, binding the agent, the action and the settlement." }
+          },
+          {
+            "@type": "Question",
+            "name": "Which agentic payment protocols does it cover?",
+            "acceptedAnswer": { "@type": "Answer", "text": "x402, AP2, A2A and MPP. Each produces a deterministic, offline-verifiable compliance receipt and settlement attestation on the same substrate." }
+          },
+          {
+            "@type": "Question",
+            "name": "How are the receipts verified?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Offline. The receipt is canonicalised under JCS (RFC 8785) and cryptographically signed; anyone can recompute the canonical bytes and check the signature with the open verifier, with no live call to AlgoVoi and no customer PII." }
+          }
+        ]
+      }
+    ]
+  }
   </script>
+
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     body { font-family: system-ui, -apple-system, sans-serif; background: #0D1117; color: #E6EDF3; line-height: 1.7; min-height: 100vh; }
@@ -32,11 +111,15 @@
     .badge { display: inline-block; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #8B5CF6; border: 1px solid rgba(139,92,246,0.35); background: rgba(139,92,246,0.08); padding: 0.25rem 0.75rem; border-radius: 999px; margin-bottom: 1rem; }
     h1 { font-size: clamp(1.75rem, 4vw, 2.5rem); font-weight: 800; line-height: 1.15; margin-bottom: 1rem; }
     h1 span { background: linear-gradient(135deg, #00C8FF, #8B5CF6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
-    .subtitle { color: #8B949E; font-size: 1.05rem; max-width: 680px; }
+    .subtitle { color: #8B949E; font-size: 1.05rem; max-width: 700px; }
     h2 { font-size: 1.35rem; font-weight: 700; margin: 2.75rem 0 0.85rem; }
+    h3 { font-size: 1rem; font-weight: 700; margin: 1.25rem 0 0.35rem; color: #E6EDF3; }
     p { color: #C9D1D9; margin-bottom: 1rem; }
     ul { padding-left: 1.25rem; margin-bottom: 1rem; }
     li { color: #C9D1D9; margin-bottom: 0.5rem; }
+    table { width: 100%; border-collapse: collapse; margin-bottom: 1rem; font-size: 0.95rem; }
+    th, td { text-align: left; padding: 0.5rem 0.6rem; border-bottom: 1px solid rgba(48,54,61,0.5); }
+    th { color: #8B949E; font-weight: 600; }
     .footer-links { margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid rgba(48,54,61,0.5); font-size: 0.875rem; color: #8B949E; }
   </style>
 </head>
@@ -51,36 +134,66 @@
   <main>
     <span class="badge">Open substrate</span>
     <h1>The JCS <span>canonicalisation substrate</span> for agentic payments</h1>
-    <p class="subtitle">AlgoVoi authors the open <strong>JCS (RFC 8785)</strong> canonicalisation discipline and the verifiable receipt formats that let an agent payment be re-derived and checked by anyone &mdash; across <strong>x402, AP2, A2A and MPP</strong>, on one shared substrate.</p>
+    <p class="subtitle">AlgoVoi authors the open <strong>JCS (RFC 8785)</strong> canonicalisation discipline and the <strong>verifiable, offline-verifiable</strong> compliance-receipt formats that let an agent payment be re-derived and checked by anyone &mdash; across <strong>x402, AP2, A2A and MPP</strong>, on one shared substrate, with zero customer PII.</p>
 
     <h2>What the substrate defines</h2>
+    <p>If two systems serialise the same JSON differently they hash to different bytes, and a receipt cannot be independently verified. JSON Canonicalization Scheme (<strong>RFC 8785</strong>) fixes one byte sequence per object; over it, <code>SHA-256</code> gives a stable, content-addressed reference. That is what makes a receipt checkable by a third party or a regulator, not only by the issuer.</p>
     <ul>
       <li><strong><code>action_ref</code></strong> &mdash; <code>SHA-256(JCS({agent_id, action_type, scope, timestamp_ms}))</code>: a content-addressed reference to a payment action, recomputable from the disclosed fields alone.</li>
-      <li><strong>Compliance receipt</strong> &mdash; categorical ALLOW / REFER / DENY screening outcome, signed and no-PII.</li>
+      <li><strong>Compliance receipt</strong> &mdash; categorical <strong>ALLOW / REFER / DENY</strong> screening outcome, signed and no-PII.</li>
       <li><strong>Settlement attestation</strong> &mdash; binds the on-chain settlement to the same <code>action_ref</code>.</li>
+      <li><strong>Retention chain</strong> &mdash; a self-verifiable audit chain for statutory record-keeping (MiCA / DORA).</li>
       <li><strong>RFC 9421 signing base</strong> &mdash; the canonical signing input for HTTP message signatures across a proxy chain.</li>
     </ul>
 
+    <h2>One receipt layer for every protocol</h2>
+    <p>Each protocol answers <em>how an AI agent pays</em>; AlgoVoi answers <em>how you prove the payment was screened, authorised and settled</em>. All four resolve to the same receipt grammar over the same canonical bytes.</p>
+    <table>
+      <thead><tr><th>Protocol</th><th>Charges for</th><th>AlgoVoi receipt</th></tr></thead>
+      <tbody>
+        <tr><td><strong>x402</strong></td><td>per HTTP request</td><td>x402 compliance receipt + settlement attestation</td></tr>
+        <tr><td><strong>AP2</strong></td><td>per signed mandate</td><td>mandate-bound AP2 verifiable receipts</td></tr>
+        <tr><td><strong>A2A</strong></td><td>per agent-to-agent task</td><td>A2A settlement attestation</td></tr>
+        <tr><td><strong>MPP</strong></td><td>per JSON-RPC method / MCP tool</td><td>per-method MPP compliance receipt</td></tr>
+      </tbody>
+    </table>
+
+    <h2>What's in a receipt</h2>
+    <ul>
+      <li><strong>Categorical ALLOW / REFER / DENY</strong> &mdash; the screening outcome as an enumeration, not raw customer data.</li>
+      <li><strong>Deterministic &amp; recomputable</strong> &mdash; canonicalised under JCS (RFC 8785); anyone can re-derive the hash.</li>
+      <li><strong>Offline-verifiable</strong> &mdash; cryptographically signed; verification needs no live call back to AlgoVoi.</li>
+      <li><strong>Zero customer PII</strong> &mdash; audit-grade evidence that the check ran, without exposing the customer.</li>
+    </ul>
+
     <h2>Open, and verifiable yourself</h2>
-    <p>The conformance vectors are published under <strong>Apache-2.0</strong> and cross-validated byte-identical across <strong>eight independent implementations in eight languages</strong>. Import the set by digest and confirm your implementation produces the same bytes.</p>
+    <p>The conformance vectors are published under <strong>Apache-2.0</strong> and cross-validated byte-identical across <strong>eight independent implementations in eight languages</strong> &mdash; Python, Node.js, Go, Rust, Java, PHP, .NET and Ruby.</p>
     <ul>
       <li>Conformance vectors &amp; verifier: <a href="https://github.com/chopmob-cloud/algovoi-jcs-conformance-vectors">algovoi-jcs-conformance-vectors</a></li>
       <li>Receipt verifier: <a href="https://github.com/chopmob-cloud/algovoi-receipt-verifier">algovoi-receipt-verifier</a></li>
-      <li>RFC 9421 signer / verifier: <a href="https://github.com/chopmob-cloud/algovoi-rfc9421-signer">signer</a> &middot; <a href="https://github.com/chopmob-cloud/algovoi-rfc9421-verifier">verifier</a></li>
+      <li>RFC 9421 <a href="https://github.com/chopmob-cloud/algovoi-rfc9421-signer">signer</a> &middot; <a href="https://github.com/chopmob-cloud/algovoi-rfc9421-verifier">verifier</a></li>
     </ul>
 
-    <h2>Standards</h2>
-    <p>The derivations are written up as Independent-Submission, Informational IETF Internet-Drafts:</p>
+    <h2>Standards — dated IETF Internet-Drafts</h2>
     <ul>
-      <li><code>draft-hopley-x402-canonicalisation-jcs-v1</code></li>
-      <li><code>draft-hopley-x402-compliance-receipt</code></li>
-      <li><code>draft-hopley-x402-settlement-attestation</code></li>
+      <li><code>draft-hopley-x402-canonicalisation-jcs-v1</code> &mdash; the canonicalisation discipline.</li>
+      <li><code>draft-hopley-x402-compliance-receipt</code> &mdash; the compliance receipt format.</li>
+      <li><code>draft-hopley-x402-settlement-attestation</code> &mdash; settlement evidence.</li>
     </ul>
+
+    <h2>FAQ</h2>
+    <h3>What is the JCS canonicalisation substrate?</h3>
+    <p>AlgoVoi's open discipline that pins JCS (RFC 8785) as the canonical preimage form for agentic-payment receipts, so the same object serialises to identical bytes everywhere and re-verifies years later.</p>
+    <h3>What is <code>action_ref</code>?</h3>
+    <p><code>SHA-256(JCS({agent_id, action_type, scope, timestamp_ms}))</code> &mdash; a content-addressed reference to a payment action, recomputable from the disclosed fields, binding the agent, the action and the settlement.</p>
+    <h3>How are agentic payment receipts verified?</h3>
+    <p>Offline: recompute the canonical bytes and check the signature with the open verifier &mdash; no live call to AlgoVoi, no customer PII.</p>
 
     <div class="footer-links">
       <a href="https://algovoi.co.uk">algovoi.co.uk</a> &nbsp;&middot;&nbsp;
       <a href="https://docs.algovoi.co.uk/agentic-payment-receipts">Agentic payment receipts</a> &nbsp;&middot;&nbsp;
       <a href="https://docs.algovoi.co.uk/canonicalisation-substrate">Substrate docs</a> &nbsp;&middot;&nbsp;
+      <a href="https://docs.algovoi.co.uk/retention-chain-substrate">Retention chain</a> &nbsp;&middot;&nbsp;
       <a href="https://github.com/chopmob-cloud">GitHub</a>
     </div>
   </main>
