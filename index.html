@@ -174,6 +174,15 @@
       <li>RFC 9421 <a href="https://github.com/chopmob-cloud/algovoi-rfc9421-signer">signer</a> &middot; <a href="https://github.com/chopmob-cloud/algovoi-rfc9421-verifier">verifier</a></li>
     </ul>
 
+    <h2>Adopt the substrate</h2>
+    <p>Building on agentic payments? You do not need to re-derive the canonicalisation, the action references, or the receipt formats. Take the open base, confirm byte-parity, keep the attribution. Three steps:</p>
+    <ol>
+      <li><strong>Install</strong> the reference implementation: <code>pip install algovoi-substrate</code> or <code>npm i @algovoi/substrate</code>.</li>
+      <li><strong>Verify byte-parity</strong> against the published <a href="https://github.com/chopmob-cloud/algovoi-jcs-conformance-vectors">conformance vectors</a> (content-addressed, manifest 0.15.0): confirm your implementation reproduces the pinned digests across the receipt sets.</li>
+      <li><strong>Reference the discipline</strong> by its identifier <code>urn:x402:canonicalisation:jcs-rfc8785-v1</code> and keep the Apache-2.0 NOTICE. Then build your product on top.</li>
+    </ol>
+    <p>That is the whole ask: attribute the L1, import by hash, and your interop stays guaranteed as the substrate evolves. Full guide: <a href="https://docs.algovoi.co.uk/canonicalisation-substrate">Adopt the substrate</a>.</p>
+
     <h2>Standards — dated IETF Internet-Drafts</h2>
     <ul>
       <li><code>draft-hopley-x402-canonicalisation-jcs-v1</code> &mdash; the canonicalisation discipline.</li>
