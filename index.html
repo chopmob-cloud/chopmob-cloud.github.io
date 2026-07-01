@@ -56,7 +56,7 @@
         "about": ["JCS canonicalisation", "RFC 8785", "RFC 9421", "action_ref", "compliance receipt", "settlement attestation", "verifiable receipts", "agentic payments", "x402", "AP2", "A2A", "MPP"],
         "url": "https://chopmob-cloud.github.io/",
         "datePublished": "2026-06-18",
-        "dateModified": "2026-06-18",
+        "dateModified": "2026-07-01",
         "author": { "@id": "https://algovoi.co.uk/#org" },
         "publisher": { "@id": "https://algovoi.co.uk/#org" }
       },
@@ -166,6 +166,14 @@
       <li><strong>Zero customer PII</strong> &mdash; audit-grade evidence that the check ran, without exposing the customer.</li>
     </ul>
 
+    <h2>Verifiable x402 agentic payment receipt</h2>
+    <p>An x402 payment receipt is an offline-verifiable, no-PII record binding the payment execution to the exact authorisation that approved it, recomputable from the receipt alone with JCS (RFC&nbsp;8785) and SHA-256 and no AlgoVoi software. Three reference pages on the receipt construction and verification:</p>
+    <ul>
+      <li><a href="https://docs.algovoi.co.uk/verifiable-x402-receipt"><strong>Verifiable x402 receipt</strong></a> &mdash; receipt format, preimage construction, and Ed25519 signature verification with no AlgoVoi code in the trust base.</li>
+      <li><a href="https://docs.algovoi.co.uk/offline-verifiable-receipts"><strong>Offline-verifiable receipts</strong></a> &mdash; step-by-step offline verification: preimage derivation, Ed25519 signature check, and optional Falcon-1024 post-quantum layer.</li>
+      <li><a href="https://docs.algovoi.co.uk/no-pii-compliance-receipt"><strong>No-PII compliance receipt</strong></a> &mdash; how the compliance gate verdict feeds the receipt so a recipient verifies that no personal data was included, recomputable from the receipt alone.</li>
+    </ul>
+
     <h2>Open, and verifiable yourself</h2>
     <p>The conformance vectors are published under <strong>Apache-2.0</strong> and cross-validated byte-identical across <strong>eight independent implementations in eight languages</strong> &mdash; Python, Node.js, Go, Rust, Java, PHP, .NET and Ruby.</p>
     <ul>
@@ -204,6 +212,7 @@
 
     <div class="footer-links">
       <a href="https://algovoi.co.uk">algovoi.co.uk</a> &nbsp;&middot;&nbsp;
+      <a href="https://docs.algovoi.co.uk/verifiable-x402-receipt">Verifiable x402 receipt</a> &nbsp;&middot;&nbsp;
       <a href="https://docs.algovoi.co.uk/agentic-payment-receipts">Agentic payment receipts</a> &nbsp;&middot;&nbsp;
       <a href="https://docs.algovoi.co.uk/canonicalisation-substrate">Substrate docs</a> &nbsp;&middot;&nbsp;
       <a href="https://docs.algovoi.co.uk/retention-chain-substrate">Retention chain</a> &nbsp;&middot;&nbsp;
