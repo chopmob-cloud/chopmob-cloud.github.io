@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>JCS canonicalisation substrate for agentic payments | AlgoVoi</title>
   <meta name="description" content="AlgoVoi authors the open JCS (RFC 8785) canonicalisation substrate and offline-verifiable compliance receipts for agentic payments — x402, AP2, A2A and MPP." />
-  <meta name="keywords" content="JCS canonicalisation, JCS canonicalization, JSON Canonicalization Scheme, RFC 8785, RFC 9421, canonicalisation substrate, action_ref, compliance receipt, settlement attestation, retention chain, verifiable receipts, offline-verifiable receipt, no-PII compliance receipt, agentic payments, agentic commerce compliance, AI agent sanctions screening, x402 compliance receipt, AP2 verifiable receipts, A2A settlement attestation, MPP compliance receipt, conformance vectors, AlgoVoi" />
+  <meta name="keywords" content="JCS canonicalisation, JCS canonicalization, JSON Canonicalization Scheme, RFC 8785, RFC 9421, canonicalisation substrate, action_ref, compliance receipt, settlement attestation, retention chain, verifiable receipts, offline-verifiable receipt, no-PII compliance receipt, agentic payments, agentic lifecycle, complete agentic lifecycle, agentic payment lifecycle, agent lifecycle framework, agentic commerce compliance, AI agent sanctions screening, x402 compliance receipt, AP2 verifiable receipts, A2A settlement attestation, MPP compliance receipt, conformance vectors, AlgoVoi, keystone agentic, keystone lifecycle, audit chain of frames" />
   <meta name="author" content="AlgoVoi" />
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
   <meta name="theme-color" content="#0D1117" />
@@ -56,7 +56,7 @@
         "about": ["JCS canonicalisation", "RFC 8785", "RFC 9421", "action_ref", "compliance receipt", "settlement attestation", "verifiable receipts", "agentic payments", "x402", "AP2", "A2A", "MPP"],
         "url": "https://chopmob-cloud.github.io/",
         "datePublished": "2026-06-18",
-        "dateModified": "2026-07-01",
+        "dateModified": "2026-07-02",
         "author": { "@id": "https://algovoi.co.uk/#org" },
         "publisher": { "@id": "https://algovoi.co.uk/#org" }
       },
@@ -173,6 +173,12 @@
       <li><a href="https://docs.algovoi.co.uk/offline-verifiable-receipts"><strong>Offline-verifiable receipts</strong></a> &mdash; step-by-step offline verification: preimage derivation, Ed25519 signature check, and optional Falcon-1024 post-quantum layer.</li>
       <li><a href="https://docs.algovoi.co.uk/no-pii-compliance-receipt"><strong>No-PII compliance receipt</strong></a> &mdash; how the compliance gate verdict feeds the receipt so a recipient verifies that no personal data was included, recomputable from the receipt alone.</li>
     </ul>
+
+    <h2>Complete agentic lifecycle: identity to settlement</h2>
+    <p>The AlgoVoi Keystone is the complete agentic lifecycle and agentic-payment trust chain -- six content-addressed references in strict composition over JCS (RFC 8785) and SHA-256, from identity through execution to one verifiable verdict:</p>
+    <p><code>passport_ref &#x2192; mandate_ref &#x2192; policy_bound_ref &#x2192; decision_ref &#x2192; execution_ref &#x2192; trust_query_ref</code></p>
+    <p>Each reference is <code>sha256:</code> over JCS of its predecessor; recompute any field and every downstream reference diverges. The complete agentic lifecycle extends through the full post-decision sequence: settlement binds to the exact <code>execution_ref</code> produced; refund anchors to the same; an audit chain of frames links all three by <code>prev_hash</code> and caps them with one <code>trust_query_ref</code>. Any party recomputes the full lifecycle offline -- JCS (RFC 8785) and SHA-256, no AlgoVoi software in the trust base.</p>
+    <p>Full lifecycle reference and composition proofs: <a href="https://docs.algovoi.co.uk/keystone"><strong>docs.algovoi.co.uk/keystone</strong></a></p>
 
     <h2>Open, and verifiable yourself</h2>
     <p>The conformance vectors are published under <strong>Apache-2.0</strong> and cross-validated byte-identical across <strong>eight independent implementations in eight languages</strong> &mdash; Python, Node.js, Go, Rust, Java, PHP, .NET and Ruby.</p>
